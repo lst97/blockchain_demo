@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Block Chain</title>
 </head>
+
 <body>
-    <script type="text/javascript" src="./test.js"></script> 
-    <script type="text/javascript" src="./SHA256.js"></script> 
+    <script type="text/javascript" src="./test.js"></script>
+    <script type="text/javascript" src="./SHA256.js"></script>
     <p id="output"></p>
     <input type="string" id="input"></br>
-    <button id="hash" type="button" onclick="sha256Test()">Hash</button> 
-    
+    <button id="hash" type="button" onclick="sha256Test()">Hash</button>
+
+    <table style="width:100%">
+        <tr>
+            <th id="block">Block
+                <p>Index: 0</p>
+                <p>Transactions:</p>
+
+                <text>From:</text><input type="From" id="from">
+                <text>To:</text><input type="To" id="to">
+                <text>Amounts:</text><input type="Amounts" id="amount"></br>
+                <text>Signature:</text><input type="Signature" id="signature"></br>
+
+                <text>Previous Hash:</text><input type="PreviousHash" id="preHash"></br>
+                <text>Hash:</text><input type="Hash" id="hash"></br>
+                <text>Nonce:</text><input type="Nonce" id="nonce"></br>
+                <button id="verify" type="button" onclick="verifyTest()">Verify</button>
+                <button id="mine" type="button" onclick="mineTest()">Mine</button>
+            </th>
+        </tr>
+    </table>
 </body>
+
 </html>
